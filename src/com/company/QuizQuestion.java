@@ -5,6 +5,8 @@ public class QuizQuestion {
     private String quizQuestion;
     private String quizAnswer;
 
+    public QuizQuestion() {
+    }
 
     public QuizQuestion(String quizQuestion, String quizAnswer) {
         this.quizQuestion = quizQuestion;
