@@ -11,6 +11,7 @@ public class QuizQuestion {
         this.quizAnswer = quizAnswer;
     }
 
+
     public String getQuizQuestion() {
         return quizQuestion;
     }

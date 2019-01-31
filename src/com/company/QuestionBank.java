@@ -29,6 +29,7 @@ public class QuestionBank {
 
         int randomIndex = (int) (Math.random() * getQuestionsBankSize());
 
+
        return questionBank.get(randomIndex).getQuizQuestion();
     }
 

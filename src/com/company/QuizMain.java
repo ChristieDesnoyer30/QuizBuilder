@@ -26,15 +26,12 @@ public class QuizMain {
          * The user should be able to take a Quiz as many times as they wish.
          */
 //do{
-
     qz.createAQuiz();
+    qz.displayQuiz();
 
     System.out.println();
 
-
-
-
-
+    
 //} while(takeQuizAgain);
 
 

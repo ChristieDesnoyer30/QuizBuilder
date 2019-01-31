@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Quiz extends QuestionBank {
 
     QuestionBank qb = new QuestionBank();
-    private ArrayList<QuizQuestion> quiz = new ArrayList<>();
+    private ArrayList<String> quiz = new ArrayList<>();
     private ScoreKeeper score = new ScoreKeeper();
 
 
@@ -14,11 +14,23 @@ public class Quiz extends QuestionBank {
 public void createAQuiz() {
 
      qb.addQuestions();
-     
-    System.out.println(qb.getOneQuestion());
 
+     for(int i = 1; i <= 5; i++) {
+
+         quiz.add(qb.getOneQuestion());
+
+     }
 
 }
 
+public void displayQuiz(){
+
+    for(String questions : quiz){
+
+
+        System.out.println(questions);
+    }
+
+}
 
 }
