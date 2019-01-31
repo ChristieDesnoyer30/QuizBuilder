@@ -2,8 +2,8 @@ package com.company;
 
 public class QuizQuestion {
 
-    String quizQuestion;
-    String quizAnswer;
+    private String quizQuestion;
+    private String quizAnswer;
 
 
     public QuizQuestion(String quizQuestion, String quizAnswer) {

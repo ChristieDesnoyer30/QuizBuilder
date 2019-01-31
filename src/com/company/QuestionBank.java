@@ -6,6 +6,12 @@ public class QuestionBank {
 
    private ArrayList<QuizQuestion> questionBank = new ArrayList<>();
 
+
+
+
+
+
+
     public void addQuestions(){
 
         questionBank.add(new QuizQuestion("Who painted the ceiling of the Sistine Chapel?", "Michelangelo"));
@@ -15,13 +21,20 @@ public class QuestionBank {
         questionBank.add(new QuizQuestion("In which US state is 'Area 51' located?", "Nevada"));
         questionBank.add(new QuizQuestion("Which female pop culture icon has been all the following: dentist, doctor, firefighter, astronaut, paleontologist, and US Presidential candidate?"
                 , "Barbie"));
-
-
-
-
-
+        questionBank.add(new QuizQuestion("What sea creature has three hearts?"
+                , "Octopus"));
+        questionBank.add(new QuizQuestion("Which group recorded the original of “Light My Fire”?"
+                , "The Doors"));
+        questionBank.add(new QuizQuestion("A word, phrase, or sequence that reads the same backwards as forwards is known as a what?"
+                , "Palindrome"));
 
     }
+
+    public int getQuestionsBankSize(){
+
+        return questionBank.size();
+    }
+
 
 
 }
