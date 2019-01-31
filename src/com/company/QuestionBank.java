@@ -6,12 +6,6 @@ public class QuestionBank {
 
    private ArrayList<QuizQuestion> questionBank = new ArrayList<>();
 
-
-
-
-
-
-
     public void addQuestions(){
 
         questionBank.add(new QuizQuestion("Who painted the ceiling of the Sistine Chapel?", "Michelangelo"));
@@ -30,10 +24,22 @@ public class QuestionBank {
 
     }
 
+
+    public String getOneQuestion(){
+
+        int randomIndex = (int) (Math.random() * getQuestionsBankSize());
+
+       return questionBank.get(randomIndex).getQuizQuestion();
+    }
+
+
+
+
     public int getQuestionsBankSize(){
 
         return questionBank.size();
     }
+
 
 
 

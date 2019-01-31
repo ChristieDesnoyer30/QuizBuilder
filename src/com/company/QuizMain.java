@@ -5,6 +5,7 @@ public class QuizMain {
     public static void main(String[] args) {
 
         boolean takeQuizAgain = true;
+        Quiz qz = new Quiz();
 
         /*
          *Write a program which allows the user to build a quiz.
@@ -24,19 +25,17 @@ public class QuizMain {
          *and allow the user to take the Quiz.
          * The user should be able to take a Quiz as many times as they wish.
          */
-do{
+//do{
+
+    qz.createAQuiz();
+
+    System.out.println();
 
 
 
 
 
-
-
-
-
-
-
-} while(takeQuizAgain);
+//} while(takeQuizAgain);
 
 
 
