@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class QuestionBank {
 
    private ArrayList<QuizQuestion> questionBank = new ArrayList<>();
+   private ArrayList<QuizQuestion> temp = new ArrayList<>();
 
-    public void addQuestions(){
+
+    public ArrayList<QuizQuestion> addQuestions(){
 
         questionBank.add(new QuizQuestion("Who painted the ceiling of the Sistine Chapel?", "Michelangelo"));
         questionBank.add(new QuizQuestion("In which city did Romeo and Juliet live?", "Verona"));
@@ -22,19 +24,28 @@ public class QuestionBank {
         questionBank.add(new QuizQuestion("A word, phrase, or sequence that reads the same backwards as forwards is known as a what?"
                 , "Palindrome"));
 
+        return questionBank;
+
     }
 
 
-    public String getOneQuestion(){
+    public QuizQuestion getOneQuestion(){
 
         int randomIndex = (int) (Math.random() * getQuestionsBankSize());
 
+        QuizQuestion q = new QuizQuestion(questionBank.get(randomIndex).getQuizQuestion(),  questionBank.get(randomIndex).getQuizAnswer());
 
-       return questionBank.get(randomIndex).getQuizQuestion();
+        questionBank.remove(randomIndex);
+
+       return q;
     }
 
 
+public void removeQuestion(int randomIndex){
 
+    questionBank.remove(getOneQuestion());
+
+}
 
     public int getQuestionsBankSize(){
 

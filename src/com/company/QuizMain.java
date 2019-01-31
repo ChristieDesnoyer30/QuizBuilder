@@ -1,11 +1,15 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class QuizMain {
 
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
         boolean takeQuizAgain = true;
         Quiz qz = new Quiz();
+        int userChoice;
 
         /*
          *Write a program which allows the user to build a quiz.
@@ -22,19 +26,45 @@ public class QuizMain {
          *++Quiz. Quiz should include properties for an ArrayList of Questions and a ScoreKeeper object.
          *
          *QuizDemo, which should assemble a Quiz with (5) randomly-selected questions
+         *
          *and allow the user to take the Quiz.
+         *
          * The user should be able to take a Quiz as many times as they wish.
          */
-//do{
-    qz.createAQuiz();
-    qz.displayQuiz();
-
-    System.out.println();
-
-    
-//} while(takeQuizAgain);
 
 
+do{
+        System.out.println( "Would you like to take a quiz? Press 1 to start the quiz. Press 2 to exit.");
+        userChoice = scan.nextInt();
+
+  switch(userChoice) {
+
+      case 1:
+
+          qz.createAQuiz();
+
+
+
+          break;
+
+      case 2:
+
+          takeQuizAgain = false;
+
+          break;
+
+      default :
+          System.out.println("Not a valid option!");
+
+          break;
+
+
+
+
+  }
+} while(takeQuizAgain);
+
+        System.out.println("Done");
 
     }
 }

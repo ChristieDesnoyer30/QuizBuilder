@@ -2,35 +2,32 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Quiz extends QuestionBank {
+public class Quiz {
 
     QuestionBank qb = new QuestionBank();
-    private ArrayList<String> quiz = new ArrayList<>();
+
+    private ArrayList<QuizQuestion> quiz = new ArrayList<>(qb.addQuestions());
+
+
     private ScoreKeeper score = new ScoreKeeper();
 
 
+    public void createAQuiz() {
 
 
-public void createAQuiz() {
-
-     qb.addQuestions();
-
-     for(int i = 1; i <= 5; i++) {
-
-         quiz.add(qb.getOneQuestion());
-
-     }
-
-}
-
-public void displayQuiz(){
-
-    for(String questions : quiz){
+        for (int i = 1; i <= qb.getQuestionsBankSize(); i++) {
 
 
-        System.out.println(questions);
+            System.out.println(qb.getOneQuestion().getQuizQuestion());
+
+
+
+
+        }
+
+
     }
 
-}
+
 
 }

@@ -11,6 +11,10 @@ public class QuizQuestion {
         this.quizAnswer = quizAnswer;
     }
 
+    public QuizQuestion(String quizQuestion){
+
+        this.quizQuestion = quizQuestion;
+    }
 
     public String getQuizQuestion() {
         return quizQuestion;
@@ -26,5 +30,13 @@ public class QuizQuestion {
 
     public void setQuizAnswer(String quizAnswer) {
         this.quizAnswer = quizAnswer;
+    }
+
+    @Override
+    public String toString() {
+        return "QuizQuestion{" +
+                "quizQuestion='" + quizQuestion + '\'' +
+                ", quizAnswer='" + quizAnswer + '\'' +
+                '}';
     }
 }
