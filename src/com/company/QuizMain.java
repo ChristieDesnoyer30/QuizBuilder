@@ -41,8 +41,16 @@ do{
 
       case 1:
 
-          qz.createAQuiz();
 
+          if(qz.qb.getQuestionsBankSize() == 0 ){
+
+              System.out.println("Not enough questions in bank.");
+
+              takeQuizAgain = false;
+
+              break;
+          }
+          qz.createAQuiz();
 
 
           break;

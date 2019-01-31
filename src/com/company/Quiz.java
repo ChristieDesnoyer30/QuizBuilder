@@ -3,9 +3,10 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Quiz {
+public class Quiz extends QuizQuestion {
 
     QuestionBank qb = new QuestionBank();
+    QuizQuestion newQuestion = new QuizQuestion();
 
     private ArrayList<QuizQuestion> quiz = new ArrayList<>(qb.addQuestions());
 
@@ -15,10 +16,10 @@ public class Quiz {
 
     public void createAQuiz() {
     Scanner scan = new Scanner(System.in);
+        System.out.println("There are " + qb.getQuestionsBankSize() + " questions in the bank.");
 
-        for (int i = 1; i <= qb.getQuestionsBankSize(); i++) {
 
-            QuizQuestion newQuestion = new QuizQuestion();
+        for (int i = 1; i <= 5; i++) {
 
             newQuestion = qb.getOneQuestion();
 
@@ -34,12 +35,12 @@ public class Quiz {
 
                 score.inCreaseScore();
 
-                System.out.println("Your current score is" + score.getScore());
+                System.out.println("Your current score is " + score.getScore());
 
             } else{
                 System.out.println( "Answer is NOT correct ");
                 score.decreaseScore();
-                System.out.println("Your current score is" + score.getScore());
+                System.out.println("Your current score is " + score.getScore());
 
             }
 
@@ -54,9 +55,10 @@ public class Quiz {
             System.out.println( "Your score is " + score.getScore());
         }
 
+
         score.setScore(0);
 
-        quiz.add(new QuizQuestion(qb.getOneQuestion().getQuizQuestion()));
+
 
     }
 
