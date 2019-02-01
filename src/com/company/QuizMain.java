@@ -35,6 +35,7 @@ public class QuizMain {
 
 do{
         System.out.println( "Would you like to take a quiz? Press 1 to start the quiz. Press 2 to exit.");
+
         userChoice = scan.nextInt();
 
   switch(userChoice) {
@@ -50,6 +51,7 @@ do{
 
               break;
           }
+
           qz.createAQuiz();
 
 
@@ -62,11 +64,10 @@ do{
           break;
 
       default :
+
           System.out.println("Not a valid option!");
 
           break;
-
-
 
 
   }
